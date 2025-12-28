@@ -7,6 +7,7 @@ import {Capacitor} from "@capacitor/core";
 import { CameraAlt } from "@mui/icons-material";
 import {Camera, CameraResultType, CameraSource} from "@capacitor/camera";
 import { Filesystem, Directory } from '@capacitor/filesystem';
+import Footer from "./Footer.tsx";
 
 interface ReceiptDetailDrawerProps {
     open: boolean;
@@ -192,6 +193,7 @@ export default function ReceiptDetailDrawer({ open, onClose, onSave, onDelete, r
                     <Button onClick={closeDrawer} variant='outlined'>Cancel</Button>
                     <Button onClick={deleteReceipt} variant='contained' color='warning' sx={{ marginLeft: 'auto' }}>Delete</Button>
                 </Box>
+                <Footer/>
             </Box>
         </Drawer>
     )
