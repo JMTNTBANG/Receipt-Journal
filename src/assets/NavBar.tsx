@@ -27,7 +27,7 @@ export default function NavBar({ activePage, setActivePage }: NavBarProps) {
             }}
         >
             <BottomNavigationAction label="Receipts" icon={<ReceiptLongIcon/>}/>
-            <BottomNavigationAction label="Backup to Computer" icon={<BackupIcon/>}/>
+            <BottomNavigationAction label="Backup" icon={<BackupIcon/>}/>
         </BottomNavigation>
     )
 }
