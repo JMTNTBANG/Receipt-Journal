@@ -28,7 +28,6 @@ export default function ReceiptDetailDrawer({ open, onClose, onSave, onDelete, r
     const [paymentMethod, setPaymentMethod] = useState<string>(receipt?.payment_method || '');
     const [subtotal, setSubtotal] = useState<string>(receipt?.subtotal != null ? String(receipt?.subtotal) : '');
     const [tax, setTax] = useState<string>(receipt?.tax != null ? String(receipt?.tax) : '');
-
     const saveReceipt = async () => {
         const newReceipt: Omit<Receipt, 'id' | 'date_added'> = {
             vendor: vendor,
@@ -175,6 +174,7 @@ export default function ReceiptDetailDrawer({ open, onClose, onSave, onDelete, r
                 {imageUri && (
                     <img
                         src={Capacitor.convertFileSrc(imageUri)}
+                        alt={"Receipt Image"}
                         style={{ width: '100%', height: 'auto', maxHeight: '200px', objectFit: 'contain', marginTop: '16px', marginBottom: '16px' }}
                     />
                 )}

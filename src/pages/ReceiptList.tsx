@@ -90,7 +90,7 @@ export default function ReceiptsList() {
                 setDrawerState(true)
             }}/>
             <ReceiptDetailDrawer
-                key={selectedReceipt ? selectedReceipt.id : 'new'}
+                key={selectedReceipt ? selectedReceipt.id : refreshKey * -1}
                 open={drawerOpen}
                 onClose={() => {
                     setSelectedReceipt(null);

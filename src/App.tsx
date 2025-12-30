@@ -25,7 +25,7 @@ export default function App() {
         <LocalizationProvider dateAdapter={AdapterDayjs}>
             <Box sx={{height: '100vh', width: '100vw', display: 'flex', flexDirection: 'column'}}>
                 <Header/>
-                <span style={{marginLeft: 'auto', marginRight: 'auto', marginTop: '5px'}}>Receipt Journal v0.1.1</span>
+                <span style={{marginLeft: 'auto', marginRight: 'auto', marginTop: '5px'}}>Receipt Journal v0.1.2</span>
                 {activePage === 'receipts' && <ReceiptList/>}
                 {activePage === 'backup' && <BackupPage/>}
                 <NavBar activePage={activePage} setActivePage={setActivePage} />
