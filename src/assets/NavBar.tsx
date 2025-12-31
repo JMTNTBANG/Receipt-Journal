@@ -22,6 +22,7 @@ export default function NavBar({ activePage, setActivePage }: NavBarProps) {
         <BottomNavigation
             showLabels
             value={pageToIndex[activePage]}
+            sx={{ backgroundColor: 'lightgray' }}
             onChange={(_event, newValue) => {
                 setActivePage(indexToPage[newValue]);
             }}
