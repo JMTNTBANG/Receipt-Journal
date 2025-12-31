@@ -90,7 +90,25 @@ export default function ReceiptDetailDrawer({ open, onClose, onSave, onDelete, r
             sx={{'& .MuiDrawer-paper': {maxHeight: '90vh'}}}
         >
             <Box sx={{ padding: '20px' }}>
-                <Typography variant={'h5'} sx={{ marginBottom: 2 }}>Receipt Details</Typography>
+                <Typography variant={'h5'} sx={{ marginBottom: 2 }}>Receipt Photo</Typography>
+                {imageUri && (
+                    <img
+                        src={Capacitor.convertFileSrc(imageUri)}
+                        alt={"Receipt Image"}
+                        style={{ width: '100%', height: 'auto', maxHeight: '200px', objectFit: 'contain', marginTop: '16px', marginBottom: '16px' }}
+                    />
+                )}
+                <Button
+                    variant="outlined"
+                    onClick={photoPick}
+                    startIcon={<CameraAlt/>}
+                    fullWidth
+                    sx={{ marginBottom: 2}}
+
+                >
+                    {imageUri ? "Change Photo" : "Upload Photo"}
+                </Button>
+                <Typography variant={'h6'} sx={{ marginBottom: 2 }}>Receipt Details</Typography>
                 <TextField
                     label={'Vendor'}
                     value={vendor}
@@ -171,23 +189,6 @@ export default function ReceiptDetailDrawer({ open, onClose, onSave, onDelete, r
                     variant="outlined"
                     
                 />
-                {imageUri && (
-                    <img
-                        src={Capacitor.convertFileSrc(imageUri)}
-                        alt={"Receipt Image"}
-                        style={{ width: '100%', height: 'auto', maxHeight: '200px', objectFit: 'contain', marginTop: '16px', marginBottom: '16px' }}
-                    />
-                )}
-                <Button
-                    variant="outlined"
-                    onClick={photoPick}
-                    startIcon={<CameraAlt/>}
-                    fullWidth
-                    sx={{ marginBottom: 2}}
-                    
-                >
-                    {imageUri ? "Change Photo" : "Upload Photo"}
-                </Button>
                 <Box sx={{ display: 'flex', marginTop: 'auto' }}>
                     <Button onClick={saveReceipt} variant="contained" sx={{ marginRight: 2 }} >Save</Button>
                     <Button onClick={closeDrawer} variant='outlined'>Cancel</Button>

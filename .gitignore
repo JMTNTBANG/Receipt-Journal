@@ -130,3 +130,7 @@ android/app/src/main/res/xml/config.xml
 android/app/build/*
 !android/app/build/.npmkeep
 
+android/app/release/baselineProfiles/0/app-release.dm
+android/app/release/baselineProfiles/1/app-release.dm
+android/app/release/output-metadata.json
+android/gradle.properties
