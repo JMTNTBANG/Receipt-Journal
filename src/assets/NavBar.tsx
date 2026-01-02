@@ -22,12 +22,13 @@ export default function NavBar({ activePage, setActivePage }: NavBarProps) {
         <BottomNavigation
             showLabels
             value={pageToIndex[activePage]}
+            sx={{ backgroundColor: 'lightgray' }}
             onChange={(_event, newValue) => {
                 setActivePage(indexToPage[newValue]);
             }}
         >
             <BottomNavigationAction label="Receipts" icon={<ReceiptLongIcon/>}/>
-            <BottomNavigationAction label="Backup to Computer" icon={<BackupIcon/>}/>
+            <BottomNavigationAction label="Backup" icon={<BackupIcon/>}/>
         </BottomNavigation>
     )
 }

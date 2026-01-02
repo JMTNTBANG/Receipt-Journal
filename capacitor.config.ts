@@ -5,6 +5,13 @@ const config: CapacitorConfig = {
   appName: 'Receipt Journal',
   webDir: 'dist',
   plugins: {
+      SafeArea: {
+          statusBarStyle: "DARK",
+          navigationBarStyle: "DARK",
+          detectViewportFitCoverChanges: undefined,
+          initialViewportFitCover: undefined,
+          offsetForKeyboardInsetBug: undefined,
+      },
     CapacitorSQLite: {
         iosDatabaseLocation: 'Library/CapacitorDatabase',
         iosIsEncryption: true,
