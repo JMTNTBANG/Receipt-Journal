@@ -22,7 +22,7 @@ export default function App() {
     return (
         <LocalizationProvider dateAdapter={AdapterDayjs}>
             <Box sx={{height: '100vh', width: '100vw', display: 'flex', flexDirection: 'column'}}>
-                <span style={{marginLeft: 'auto', marginRight: 'auto', paddingTop: '5px', paddingBottom: '5px', backgroundColor: 'lightgray', textAlign: 'center', width: '100%'}}>Receipt Journal v0.2.0</span>
+                <span style={{marginLeft: 'auto', marginRight: 'auto', paddingTop: '5px', paddingBottom: '5px', backgroundColor: 'lightgray', textAlign: 'center', width: '100%'}}>Receipt Journal v0.2.1</span>
                 {activePage === 'receipts' && <ReceiptList/>}
                 {activePage === 'backup' && <BackupPage/>}
                 <NavBar activePage={activePage} setActivePage={setActivePage} />
