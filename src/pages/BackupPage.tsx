@@ -37,7 +37,7 @@ export default function BackupPage() {
                                 receipt.transaction_date, receipt.category, receipt.payment_method,
                                 receipt.currency_code, receipt.subtotal, receipt.tax, receipt.sale_total, receipt.note,
                                 receipt.image_uri, receipt.date_added]
-                            data += receiptData.join(',') + '\n'
+                            data += '"' + receiptData.join('","') + '"\n'
                         }
                         break;
                     case 'json':
